@@ -64,7 +64,7 @@ Loops through a predefined list of important Linux system directories and kernel
 
 ### Script 4, Log File Analyzer
 
-Reads a log file line by line using a `while read` loop. It counts how many lines match a keyword, with a default of `error`, and displays the last five matching lines. It can auto-detect log files if none are given and has a retry mechanism for empty files.
+Reads a log file line by line using a while read loop. It counts how many lines match a keyword, with a default of error, and displays the last five matching lines. It can auto-detect log files if none are given and has a retry mechanism for empty file.
 
 **Concepts used:**
 `while IFS= read -r`, counter variables, `if-then`, `grep -i`, `tail`, command-line arguments, `$()`.
@@ -170,9 +170,8 @@ chmod +x *.sh
 
 ## Notes on Linux Compatibility
 
-* Scripts have been tested on Ubuntu 22.04 and later, Fedora 38 and later, and Debian 12.
-* Script 2 checks whether the system uses `rpm` (Red Hat/Fedora) or `dpkg` (Debian/Ubuntu).
-* Script 4 finds the correct log file path for your distribution.
-* All scripts are written in standard Bash and avoid making distro-specific assumptions wherever possible.
+* Scripts have been validated to work on Ubuntu 22.04 or higher, Fedora 38 or higher and Debian 12.
+* Script 2 tells you if the operating system is running using the RPM package manager (Red Hat/Fedora) or DPKG package manager (Debian/Ubuntu).
+* Script 4 determines the correct log file location for your distribution.
 
 ---
